@@ -25,13 +25,13 @@
 			title: 'Estagiário da TI',
 			company: 'LEMA Consultoria',
 			period: '2025 - 2026',
-			desc: 'Aprendizado em: Docker, React, Node, Cálculos financeiros e etc.'
+			desc: 'Aprendizado em Go, Rust, Docker, React, Node, Cálculos financeiros e etc.'
 		},
 		{
 			title: 'Desenvolvedor Backend',
 			company: 'LEMA Consultoria',
-			period: '2026 - agora mesmo',
-			desc: 'Encarregado de automações, integrações com IA e manutenção de uma monorepo'
+			period: '2026 - Atual',
+			desc: 'Encarregado de automações, integrações com IA e manutenção de uma aplicação web'
 		}
 	];
 </script>

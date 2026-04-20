@@ -25,5 +25,21 @@ export default defineConfig({
 		'title-news': 'font-hero text-5xl md:text-7xl font-normal text-news-ink tracking-wide',
 		'subtitle-news': 'font-serif text-3xl font-bold text-news-ink tracking-wide',
 		'body-news': 'font-serif text-lg text-news-ink leading-relaxed'
+	},
+	typography: {
+		news: {
+			css: {
+				'--tw-prose-body': '#2c2c2c',
+				'--tw-prose-headings': '#2c2c2c',
+				'--tw-prose-links': '#8b0000',
+				'--tw-prose-bold': '#2c2c2c',
+				'--tw-prose-counters': '#4a4a4a',
+				'--tw-prose-bullets': '#4a4a4a',
+				'--tw-prose-hr': '#2c2c2c',
+				'--tw-prose-quotes': '#4a4a4a',
+				'--tw-prose-quote-borders': '#2c2c2c',
+				'--tw-prose-caption': '#4a4a4a'
+			}
+		}
 	}
 });

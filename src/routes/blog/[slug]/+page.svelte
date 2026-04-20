@@ -36,7 +36,7 @@
 	</div>
 
 	<div
-		class="prose prose-news prose-lg mx-auto font-serif text-news-ink prose-headings:font-focus prose-headings:font-normal prose-headings:text-news-ink prose-a:text-news-red prose-a:underline prose-a:decoration-news-red prose-a:underline-offset-4 hover:prose-a:bg-news-red hover:prose-a:text-news-paper prose-blockquote:border-l-4 prose-blockquote:border-news-ink prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-news-inkLight prose-hr:border-news-ink "
+		class="prose prose-lg mx-auto font-serif text-news-ink prose-headings:font-focus prose-headings:font-normal prose-headings:text-news-ink prose-a:text-news-red prose-a:underline prose-a:decoration-news-red prose-a:underline-offset-4 hover:prose-a:bg-news-red hover:prose-a:text-news-paper prose-blockquote:border-l-4 prose-blockquote:border-news-ink prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-news-inkLight prose-hr:border-news-ink "
 	>
 		<Content />
 	</div>
