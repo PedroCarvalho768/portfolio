@@ -10,7 +10,7 @@
 	<div class="max-w-4xl mx-auto">
 		<div use:reveal>
 			<h1 class="text-4xl md:text-6xl font-hero font-normal mb-6 text-news-ink leading-tight">
-				Pedro. {'<'}Aoba{'>'}
+				Aoba
 			</h1>
 			<div class="border-y-2 border-news-ink py-4 mb-6">
 				<p class="font-serif text-xl md:text-2xl leading-relaxed text-news-ink">
