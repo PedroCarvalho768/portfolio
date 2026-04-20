@@ -27,7 +27,7 @@
 
 				<div class="flex flex-col gap-4 font-sans text-sm uppercase tracking-widest">
 					<a
-						href="https://github.com"
+						href="https://github.com/PedroCarvalho768"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-center justify-between border border-news-ink p-4 pt-6 hover:bg-news-ink hover:text-news-paper transition-colors"
@@ -37,7 +37,7 @@
 					</a>
 
 					<a
-						href="https://linkedin.com"
+						href="https://www.linkedin.com/in/pedro-carvalho-1b57573bb"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-center justify-between border border-news-ink p-4 pt-6 hover:bg-news-ink hover:text-news-paper transition-colors"
@@ -47,7 +47,7 @@
 					</a>
 
 					<a
-						href="https://instagram.com"
+						href="https://www.instagram.com/pedro.carvalho768?igsh=am8zd3EzZTNiajhp"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-center justify-between border border-news-ink p-4 pt-6 hover:bg-news-ink hover:text-news-paper transition-colors"
