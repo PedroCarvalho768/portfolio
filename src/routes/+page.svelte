@@ -13,7 +13,7 @@
 			use:reveal
 		>
 			<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-6 pt-4 md:pt-6">
-				Pedro. {'<'}Aoba{'>'}
+				Aoba
 			</h1>
 			<div class="border-y-2 border-news-ink py-4 mb-6">
 				<p class="font-serif text-xl md:text-2xl leading-relaxed text-news-ink">
