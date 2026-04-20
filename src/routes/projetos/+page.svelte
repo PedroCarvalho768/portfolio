@@ -12,7 +12,7 @@
 		class="border-[6px] border-double border-news-ink p-8 md:p-16 relative bg-news-paper"
 		use:reveal
 	>
-		<h1 class="font-serif text-6xl md:text-8xl text-news-ink mb-6 pt-4 md:pt-6 leading-tight">
+		<h1 class="font-serif text-4xl md:text-7xl text-news-ink mb-6 pt-4 md:pt-6 leading-tight">
 			Projetos
 		</h1>
 

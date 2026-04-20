@@ -9,7 +9,7 @@
 
 <section class="max-w-4xl mx-auto py-12">
 	<div class="text-center mb-12 border-b-4 border-double border-news-ink pb-6" use:reveal>
-		<h1 class="font-serif text-6xl md:text-8xl text-news-ink tracking-wide mb-2">Blog</h1>
+		<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-2">Blog</h1>
 		<p class="font-sans text-xs uppercase tracking-widest text-news-inkLight">
 			Artigos, tutoriais e devaneios sobre código.
 		</p>

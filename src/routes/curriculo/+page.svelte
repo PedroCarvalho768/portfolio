@@ -42,7 +42,7 @@
 
 <section class="max-w-5xl mx-auto py-12">
 	<div class="text-center mb-16 border-b-4 border-double border-news-ink pb-8" use:reveal>
-		<h1 class="font-serif text-6xl md:text-8xl text-news-ink tracking-wide mb-4 pt-4 md:pt-6">
+		<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-4 pt-4 md:pt-6">
 			Skills & Experiência
 		</h1>
 		<p class="font-sans text-sm uppercase tracking-widest text-news-inkLight">

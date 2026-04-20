@@ -9,7 +9,7 @@
 <section class="py-12 md:py-16 border-b-2 border-news-ink mb-12">
 	<div class="max-w-4xl mx-auto">
 		<div use:reveal>
-			<h1 class="font-serif text-6xl md:text-8xl text-news-ink tracking-wide mb-4 pt-4 md:pt-6">
+			<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-4 pt-4 md:pt-6">
 				Aoba
 			</h1>
 			<div class="border-y-2 border-news-ink py-4 mb-6">
