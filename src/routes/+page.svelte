@@ -8,9 +8,12 @@
 
 <section class="py-12 md:py-16 border-b-2 border-news-ink mb-12">
 	<div class="max-w-4xl mx-auto">
-		<div use:reveal>
-			<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-4 pt-4 md:pt-6">
-				Aoba
+		<div
+			class="border-[6px] border-double border-news-ink p-8 md:p-12 relative bg-news-paper"
+			use:reveal
+		>
+			<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-6 pt-4 md:pt-6">
+				Pedro. {'<'}Aoba{'>'}
 			</h1>
 			<div class="border-y-2 border-news-ink py-4 mb-6">
 				<p class="font-serif text-xl md:text-2xl leading-relaxed text-news-ink">
