@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { reveal } from '$lib/reveal';
+	import { resolve } from '$app/paths';
+	import { ArrowRight, Send } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -27,18 +29,25 @@
 			</div>
 			<div class="flex flex-wrap gap-6 mt-8 font-sans">
 				<a
-					href="/projetos"
-					class="uppercase tracking-widest text-sm font-bold text-news-ink border-b border-news-ink hover:text-news-red hover:border-news-red transition-colors pb-1"
+					href={resolve('/projetos')}
+					class="group uppercase tracking-widest text-sm font-bold text-news-ink border-b border-news-ink hover:text-news-red hover:border-news-red transition-colors pb-1 inline-flex items-center gap-2"
 				>
-					Ver Projetos →
+					Ver Projetos
+					<ArrowRight
+						size={14}
+						class="transition-transform duration-300 group-hover:translate-x-1"
+					/>
 				</a>
 				<a
-					href="/contato"
-					class="uppercase tracking-widest text-sm font-bold text-news-ink border-b border-news-ink hover:text-news-red hover:border-news-red transition-colors pb-1"
+					href={resolve('/contato')}
+					class="group uppercase tracking-widest text-sm font-bold text-news-ink border-b border-news-ink hover:text-news-red hover:border-news-red transition-colors pb-1 inline-flex items-center gap-2"
 				>
-					Bora Conversar →
+					Bora Conversar
+					<Send size={14} class="transition-transform duration-300 group-hover:translate-x-1" />
 				</a>
 			</div>
 		</div>
 	</div>
 </section>
+
+

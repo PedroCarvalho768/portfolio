@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { reveal } from '$lib/reveal';
-	let { data } = $props();
+	import { resolve } from '$app/paths';
+	import { Construction, ArrowLeft } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -12,6 +13,8 @@
 		class="border-[6px] border-double border-news-ink p-8 md:p-16 relative bg-news-paper"
 		use:reveal
 	>
+		<Construction size={48} class="text-news-inkLight mx-auto mb-6" />
+
 		<h1 class="font-serif text-4xl md:text-7xl text-news-ink mb-6 pt-4 md:pt-6 leading-tight">
 			Projetos
 		</h1>
@@ -26,14 +29,15 @@
 			Ainda estou arrumando essa página. Volta mais tarde!
 		</p>
 
-		<p class="font-sans text-sm uppercase tracking-widest text-news-inkLight mb-12">
+		<p class="font-sans text-sm uppercase tracking-widest text-news-inkLight mb-12 italic">
 			&mdash; Roma não foi construída em um dia, e nem esse portfólio. &mdash;
 		</p>
 
 		<a
-			href="/"
-			class="inline-block font-sans text-sm font-bold uppercase tracking-widest text-news-ink border border-news-ink px-6 py-3 hover:bg-news-ink hover:text-news-paper transition-colors"
+			href={resolve('/')}
+			class="group inline-flex items-center gap-2 font-sans text-sm font-bold uppercase tracking-widest text-news-ink border border-news-ink px-6 py-3 hover:bg-news-ink hover:text-news-paper transition-colors"
 		>
+			<ArrowLeft size={14} class="transition-transform duration-300 group-hover:-translate-x-1" />
 			Voltar para o Início
 		</a>
 	</div>

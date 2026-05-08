@@ -17,10 +17,7 @@
 
 	<div class="grid grid-cols-1 gap-10">
 		{#if data.posts.length === 0}
-			<div
-				class="text-center py-12 border  border-news-ink"
-				use:reveal={{ delay: 100 }}
-			>
+			<div class="text-center py-12 border border-news-ink" use:reveal={{ delay: 100 }}>
 				<h2 class="font-serif text-3xl text-news-ink mb-2">Nenhum post publicado ainda.</h2>
 				<p class="font-serif text-news-inkLight">Estou escrevendo o próximo...</p>
 			</div>
@@ -28,7 +25,7 @@
 			{#each data.posts as post, index}
 				<a href="/blog/{post.slug}" class="block group" use:reveal={{ delay: 100 * (index + 1) }}>
 					<article
-						class="pb-8 border-b border-news-ink  transition-all hover:bg-news-highlight/30 p-4 -mx-4 rounded"
+						class="pb-8 border-b border-news-ink transition-all hover:bg-news-highlight/30 p-4 -mx-4 rounded"
 					>
 						<header class="mb-3">
 							<div

@@ -12,6 +12,7 @@
 ## Habilidades
 
 Use skills instaladas conforme necessidade. Para tarefas de frontend:
+
 - `visual-engineering` - UI/UX com UnoCSS
 - `frontend-ui-ux` - Design e estilização
 

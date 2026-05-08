@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { reveal } from '$lib/reveal';
+	import { Wrench, Briefcase } from 'lucide-svelte';
 
 	const skills = [
-		{ name: 'TypeScript', level: '95%' },
-		{ name: 'Node.js / Bun', level: '90%' },
-		{ name: 'PostgreSQL', level: '90%' },
-		{ name: 'Python (Pandas)', level: '85%' },
-		{ name: 'Docker / DevOps', level: '75%' },
-		{ name: 'Go / Rust', level: '70%' },
-		{ name: 'Figma / UI/UX', level: '80%' },
-		{ name: 'Centralizar Divs', level: '100%' },
-		{ name: 'Deploy na Sexta 18h', level: '100%' },
-		{ name: 'Ignorar o Linter', level: '99%' }
+		{ name: 'Python (FastAPI / Flask)', level: '95%' },
+		{ name: 'Automação (Selenium / browser-use)', level: '90%' },
+		{ name: 'Go', level: '80%' },
+		{ name: 'PostgreSQL', level: '80%' },
+		{ name: 'Docker', level: '75%' },
+		{ name: 'Node.js (Backend)', level: '75%' },
+		{ name: 'Playwright (Testes)', level: '70%' },
+		{ name: 'Rust', level: '60%' },
+		{ name: 'Deploy na Sexta 18h', level: '15%' },
+		{ name: 'Ignorar o Linter', level: '8%' }
 	];
 
 	const jobs = [
@@ -19,19 +20,19 @@
 			title: 'Dev Freelancer',
 			company: 'Freela',
 			period: '2022 - Atual',
-			desc: 'No ínicio focado em engenharia de dados, mas hoje desenvolvo O SEU PROJETO seja ele qual for'
+			desc: 'Automação de processos, APIs em Python e Go, raspagem de dados, integrações com IA.'
 		},
 		{
 			title: 'Estagiário da TI',
 			company: 'LEMA Consultoria',
 			period: '2025 - 2026',
-			desc: 'Aprendizado em Go, Rust, Docker, React, Node, Cálculos financeiros e etc.'
+			desc: 'Automações em Go e Rust, Docker, APIs com Node, cálculos financeiros.'
 		},
 		{
 			title: 'Desenvolvedor Backend',
 			company: 'LEMA Consultoria',
 			period: '2026 - Atual',
-			desc: 'Encarregado de automações, integrações com IA e manutenção de uma aplicação web'
+			desc: 'APIs com FastAPI, automações com Selenium e browser-use, integrações com IA, manutenção de aplicações web.'
 		}
 	];
 </script>
@@ -55,22 +56,25 @@
 			class="lg:col-span-1 border-r-0 lg:border-r border-news-ink lg:pr-12"
 			use:reveal={{ delay: 100 }}
 		>
-			<h2 class="font-serif text-4xl text-news-ink mb-6 border-b border-news-ink pb-2 text-center">
+			<h2
+				class="font-serif text-4xl text-news-ink mb-6 border-b border-news-ink pb-2 text-center inline-flex items-center justify-center gap-3 w-full"
+			>
+				<Wrench size={28} class="text-news-inkLight" />
 				Habilidades
 			</h2>
 
 			<div class="space-y-6 font-serif">
-				{#each skills as skill}
-					<div class="border-b border-news-ink pb-2">
+				{#each skills as skill, i (skill.name)}
+					<div class="border-b border-news-ink pb-2" use:reveal={{ delay: 100 * (i + 1) }}>
 						<div class="flex justify-between items-baseline mb-1">
 							<span class="text-news-ink font-bold">{skill.name}</span>
 							<span class="text-news-inkLight text-sm font-sans">{skill.level}</span>
 						</div>
-						<div class="w-full h-1 bg-news-ink/10 relative">
-							<div
-								class="absolute top-0 left-0 h-full bg-news-ink"
-								style="width: {skill.level}"
-							></div>
+						<div class="w-full h-1 bg-news-ink/10 relative overflow-hidden">
+	<div
+		class="absolute top-0 left-0 h-full bg-news-ink transition-all duration-700 ease-out"
+		style="width: {skill.level}"
+	></div>
 						</div>
 					</div>
 				{/each}
@@ -78,12 +82,15 @@
 		</div>
 
 		<div class="lg:col-span-2" use:reveal={{ delay: 200 }}>
-			<h2 class="font-serif text-4xl text-news-ink mb-8 border-b border-news-ink pb-2 text-center">
+			<h2
+				class="font-serif text-4xl text-news-ink mb-8 border-b border-news-ink pb-2 text-center inline-flex items-center justify-center gap-3 w-full"
+			>
+				<Briefcase size={28} class="text-news-inkLight" />
 				Histórico Profissional
 			</h2>
 
 			<div class="space-y-12">
-				{#each jobs as job, index}
+				{#each jobs as job, index (job.title)}
 					<article
 						use:reveal={{ delay: 100 * (index + 1) }}
 						class="relative pl-6 border-l-2 border-news-ink"
