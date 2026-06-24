@@ -1,0 +1,180 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-06-24T16:13:00-03:00",
+	"title": "Design System: The Blackletter Gazette",
+	"extensions": {
+		"colorMeta": {
+			"paper": {
+				"role": "neutral",
+				"displayName": "Newsprint Paper",
+				"canonical": "oklch(94% 0.015 85)",
+				"tonalRamp": [
+					"#faf8f3",
+					"#f8f5ef",
+					"#f5f2ea",
+					"#f4f1ea",
+					"#eae6da",
+					"#e0dbc9",
+					"#d6d0b9",
+					"#ccc5a9"
+				]
+			},
+			"ink": {
+				"role": "primary",
+				"displayName": "News Ink",
+				"canonical": "oklch(22% 0.01 0)",
+				"tonalRamp": [
+					"#1a1a1a",
+					"#222222",
+					"#2c2c2c",
+					"#363636",
+					"#404040",
+					"#4a4a4a",
+					"#555555",
+					"#606060"
+				]
+			},
+			"ink-light": {
+				"role": "neutral",
+				"displayName": "Faded Ink",
+				"canonical": "oklch(35% 0.01 0)",
+				"tonalRamp": []
+			},
+			"red": {
+				"role": "accent",
+				"displayName": "Press Red",
+				"canonical": "oklch(32% 0.06 25)",
+				"tonalRamp": [
+					"#3d0000",
+					"#550000",
+					"#6e0000",
+					"#870000",
+					"#8b0000",
+					"#a50000",
+					"#bf0000",
+					"#d90000"
+				]
+			},
+			"highlight": {
+				"role": "neutral",
+				"displayName": "Highlight",
+				"canonical": "oklch(90% 0.02 85)",
+				"tonalRamp": []
+			}
+		},
+		"typographyMeta": {
+			"display": {
+				"displayName": "Blackletter Display",
+				"purpose": "Name and major section titles only. Never body text. The gothic identity anchor."
+			},
+			"headline": {
+				"displayName": "Serif Headline",
+				"purpose": "Page subtitles, section opens, article titles."
+			},
+			"body": {
+				"displayName": "Serif Body",
+				"purpose": "All prose. Max line length 65-75ch."
+			},
+			"label": {
+				"displayName": "Sans Label",
+				"purpose": "Date stamps, section eyebrows, metadata, button text. Uppercase only."
+			}
+		},
+		"shadows": [],
+		"motion": [
+			{
+				"name": "ease-reveal",
+				"value": "cubic-bezier(0.22, 1, 0.36, 1)",
+				"purpose": "Scroll reveal entrance (fade + translateY)."
+			},
+			{ "name": "duration-reveal", "value": "600ms", "purpose": "Reveal animation duration." }
+		],
+		"breakpoints": [
+			{ "name": "sm", "value": "640px" },
+			{ "name": "md", "value": "768px" },
+			{ "name": "lg", "value": "1024px" }
+		]
+	},
+	"components": [
+		{
+			"name": "Primary Button",
+			"kind": "button",
+			"refersTo": "button-primary",
+			"description": "Hard-edged rectangular button. Paper bg, ink text, 2px offset shadow. Inverts on hover.",
+			"html": "<button class=\"ds-btn-primary\">VER PROJETOS</button>",
+			"css": ".ds-btn-primary { background: #f4f1ea; color: #2c2c2c; border: 1px solid #2c2c2c; padding: 16px 24px; font-family: Inter, system-ui, sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; box-shadow: 2px 2px 0 0 #2c2c2c; cursor: pointer; transition: all 200ms ease; } .ds-btn-primary:hover { background: #2c2c2c; color: #f4f1ea; } .ds-btn-primary:active { transform: translate(1px, 1px); box-shadow: none; }"
+		},
+		{
+			"name": "Hero Container",
+			"kind": "card",
+			"refersTo": "card-hero",
+			"description": "Double-border container for hero and featured sections. Centered, single-column.",
+			"html": "<div class=\"ds-card-hero\"><h1 style=\"font-family: UnifrakturMaguntia, cursive; font-size: clamp(2.5rem, 8vw, 5rem); color: #2c2c2c; margin: 0 0 1rem 0; letter-spacing: 0.02em;\">Aoba</h1><div class=\"ds-card-hero-body\"><p>Faço c\u00f3digo que resolve.</p></div></div>",
+			"css": ".ds-card-hero { background: #f4f1ea; border: 6px double #2c2c2c; padding: 32px 48px; text-align: center; } .ds-card-hero-body { border-top: 2px solid #2c2c2c; border-bottom: 2px solid #2c2c2c; padding: 16px 0; margin: 16px 0; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1rem, 2vw, 1.25rem); color: #2c2c2c; line-height: 1.6; }"
+		},
+		{
+			"name": "Nav Link",
+			"kind": "nav",
+			"refersTo": "nav-link",
+			"description": "Centered horizontal nav. Playfair Display, hover transitions to press red with animated underline.",
+			"html": "<nav style=\"display: flex; gap: 2.5rem; justify-content: center;\"><a class=\"ds-nav-link\">In\u00edcio</a><a class=\"ds-nav-link\">Curr\u00edculo</a><a class=\"ds-nav-link\">Projetos</a></nav>",
+			"css": ".ds-nav-link { font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; color: #2c2c2c; text-decoration: none; letter-spacing: 0.05em; cursor: pointer; position: relative; transition: color 200ms ease; } .ds-nav-link:hover { color: #8b0000; } .ds-nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: #8b0000; transition: width 300ms ease; } .ds-nav-link:hover::after { width: 100%; }"
+		},
+		{
+			"name": "Timeline Item",
+			"kind": "custom",
+			"refersTo": "timeline-item",
+			"description": "Job history item with left border, dot marker, and metadata.",
+			"html": "<div class=\"ds-timeline-item\"><div class=\"ds-timeline-dot\"></div><h3 class=\"ds-timeline-title\">Desenvolvedor Backend</h3><div class=\"ds-timeline-meta\"><span class=\"ds-timeline-company\">Empresa</span><span>&mdash;</span><span>2026 - Atual</span></div><p class=\"ds-timeline-desc\">APIs com FastAPI, automa\u00e7\u00f5es.</p></div>",
+			"css": ".ds-timeline-item { position: relative; padding-left: 24px; border-left: 2px solid #2c2c2c; margin-bottom: 48px; font-family: 'Playfair Display', Georgia, serif; } .ds-timeline-dot { position: absolute; left: -5px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: #2c2c2c; } .ds-timeline-title { font-size: clamp(1.5rem, 3vw, 1.875rem); font-weight: 700; color: #2c2c2c; margin: 0 0 8px 0; line-height: 1.2; } .ds-timeline-meta { font-family: Inter, system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a4a4a; margin-bottom: 8px; display: flex; gap: 8px; } .ds-timeline-company { font-weight: 700; } .ds-timeline-desc { font-size: clamp(1rem, 2vw, 1.125rem); color: #2c2c2c; line-height: 1.6; margin: 0; }"
+		}
+	],
+	"narrative": {
+		"northStar": "The Blackletter Gazette",
+		"overview": "A design system that treats the screen like a printing press. Heavy blackletter display typography, ink-on-cream-paper color, hard borders, double rules, and zero rounding. This is not a 'dark mode' or a 'vintage theme' \u2014 it's a typographic register where weight communicates before color does. The page feels physically substantial: dense text blocks, deliberate white space used as punctuation, and a single dark red accent deployed sparingly. The system explicitly rejects: clean/minimalist white-space-heavy design, SaaS gradients and glassmorphism, rounded corners, generic dev dark themes with neon accents. Every visual decision starts from the question 'would this work in a newspaper?'",
+		"keyCharacteristics": [
+			"Typography-first: blackletter as visual anchor, serif for body weight",
+			"Flat by dogma: no shadows, no elevation \u2014 depth comes from double borders, line weight, and ink density",
+			"Restrained palette: cream paper, dark ink, one red accent",
+			"Hard edges: all radii are 0 or sub-2px",
+			"Label hierarchy via uppercase + wide tracking, never all-caps body text",
+			"Motion as reveal only: scroll-triggered fade+translate, no decorative animation"
+		],
+		"rules": [
+			{
+				"name": "The Pigment Rule",
+				"body": "Every color must look like it came from a printing press. No RGB-neon, no pastels, no gradients.",
+				"section": "colors"
+			},
+			{
+				"name": "The One Font Per Job Rule",
+				"body": "Display is blackletter. Body is serif. Labels are sans. Never substitute.",
+				"section": "typography"
+			},
+			{
+				"name": "The Flat-By-Dogma Rule",
+				"body": "No shadows, no elevation at any state. Depth is conveyed through double borders and line weight contrast.",
+				"section": "elevation"
+			}
+		],
+		"dos": [
+			"Use blackletter (UnifrakturMaguntia) for the name and major display roles only \u2014 never for body text or long copy.",
+			"Keep all borders hard and squared: 0px border-radius everywhere.",
+			"Use double borders (border-double) for structural containers and section dividers.",
+			"Deploy the red accent sparingly \u2014 links, hover states, selection color. \u22645% of any screen.",
+			"Use uppercase + wide tracking for labels, dates, metadata.",
+			"Use scroll-reveal animations (fade + translateY) as the only motion vocabulary."
+		],
+		"donts": [
+			"Use any shadow, drop-shadow, or elevation. Flat by dogma.",
+			"Round any corner. Zero rounding across the system.",
+			"Use gradients, glassmorphism, or any decorative filter.",
+			"Use side-stripe colored borders (border-left/border-right > 1px as accent).",
+			"Use clean/minimalist Apple-like white-space-heavy layouts.",
+			"Use generic dev dark theme tropes (neon accents, terminal green, matrix references).",
+			"Animate layout properties or use decorative motion. Reveal only.",
+			"Use all-caps for body copy or long text passages.",
+			"Add identical card grids with icon + heading + text repeated endlessly."
+		]
+	}
+}

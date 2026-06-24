@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { reveal } from '$lib/reveal';
-	import { Wrench, Briefcase } from 'lucide-svelte';
 
 	const skills = [
 		{ name: 'Python (FastAPI / Flask)', level: '95%' },
@@ -17,10 +16,10 @@
 
 	const jobs = [
 		{
-			title: 'Dev Freelancer',
-			company: 'Freela',
-			period: '2022 - Atual',
-			desc: 'Automação de processos, APIs em Python e Go, raspagem de dados, integrações com IA.'
+			title: 'Desenvolvedor Backend',
+			company: 'LEMA Consultoria',
+			period: '2026 - Atual',
+			desc: 'APIs com FastAPI, automações com Selenium e browser-use, integrações com IA, manutenção de aplicações web.'
 		},
 		{
 			title: 'Estagiário da TI',
@@ -29,10 +28,10 @@
 			desc: 'Automações em Go e Rust, Docker, APIs com Node, cálculos financeiros.'
 		},
 		{
-			title: 'Desenvolvedor Backend',
-			company: 'LEMA Consultoria',
-			period: '2026 - Atual',
-			desc: 'APIs com FastAPI, automações com Selenium e browser-use, integrações com IA, manutenção de aplicações web.'
+			title: 'Dev Freelancer',
+			company: 'Freela',
+			period: '2022 - Atual',
+			desc: 'Automação de processos, APIs em Python e Go, raspagem de dados, integrações com IA.'
 		}
 	];
 </script>
@@ -41,78 +40,83 @@
 	<title>Pedro | Currículo</title>
 </svelte:head>
 
-<section class="max-w-5xl mx-auto py-12">
-	<div class="text-center mb-16 border-b-4 border-double border-news-ink pb-8" use:reveal>
-		<h1 class="font-serif text-4xl md:text-7xl text-news-ink tracking-wide mb-4 pt-4 md:pt-6">
-			Skills & Experiência
-		</h1>
-		<p class="font-sans text-sm uppercase tracking-widest text-news-inkLight">
-			Minhas habilidades e trajetória.
-		</p>
-	</div>
-
-	<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-		<div
-			class="lg:col-span-1 border-r-0 lg:border-r border-news-ink lg:pr-12"
-			use:reveal={{ delay: 100 }}
-		>
-			<h2
-				class="font-serif text-4xl text-news-ink mb-6 border-b border-news-ink pb-2 text-center inline-flex items-center justify-center gap-3 w-full"
-			>
-				<Wrench size={28} class="text-news-inkLight" />
-				Habilidades
-			</h2>
-
-			<div class="space-y-6 font-serif">
-				{#each skills as skill, i (skill.name)}
-					<div class="border-b border-news-ink pb-2" use:reveal={{ delay: 100 * (i + 1) }}>
-						<div class="flex justify-between items-baseline mb-1">
-							<span class="text-news-ink font-bold">{skill.name}</span>
-							<span class="text-news-inkLight text-sm font-sans">{skill.level}</span>
-						</div>
-						<div class="w-full h-1 bg-news-ink/10 relative overflow-hidden">
-	<div
-		class="absolute top-0 left-0 h-full bg-news-ink transition-all duration-700 ease-out"
-		style="width: {skill.level}"
-	></div>
-						</div>
-					</div>
-				{/each}
+<section class="section-dark min-h-[35vh] flex items-center">
+	<div class="container mx-auto px-4 py-20 md:py-24 w-full">
+		<div class="max-w-5xl mx-auto" use:reveal>
+			<p class="font-sans text-xs uppercase tracking-[0.25em] text-news-paper/50 mb-4">Currículo</p>
+			<h1 class="title-display-dark mb-4">
+				Skills &amp; Exper<span class="text-news-red">i</span>ência
+			</h1>
+			<div class="border-t-2 border-news-paper/30 pt-4 max-w-xl">
+				<p class="font-serif text-xl md:text-2xl text-news-paper/80 leading-relaxed">
+					O que sei fazer e onde fiz.
+				</p>
 			</div>
 		</div>
+	</div>
+</section>
 
-		<div class="lg:col-span-2" use:reveal={{ delay: 200 }}>
-			<h2
-				class="font-serif text-4xl text-news-ink mb-8 border-b border-news-ink pb-2 text-center inline-flex items-center justify-center gap-3 w-full"
-			>
-				<Briefcase size={28} class="text-news-inkLight" />
-				Histórico Profissional
-			</h2>
+<section class="section-ink py-20 md:py-24">
+	<div class="container mx-auto px-4">
+		<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-20">
+			<div class="lg:col-span-1" use:reveal={{ delay: 100 }}>
+				<div class="border border-news-paper/15 p-6 md:p-8">
+					<h2 class="font-sans text-[10px] uppercase tracking-[0.2em] text-news-paper/40 mb-6">
+						Habilidades
+					</h2>
 
-			<div class="space-y-12">
-				{#each jobs as job, index (job.title)}
-					<article
-						use:reveal={{ delay: 100 * (index + 1) }}
-						class="relative pl-6 border-l-2 border-news-ink"
-					>
-						<div class="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-news-ink"></div>
-
-						<header class="mb-3">
-							<h3 class="font-serif text-3xl text-news-ink leading-tight">{job.title}</h3>
-							<div
-								class="font-sans text-xs uppercase tracking-wider text-news-inkLight mt-1 flex items-center gap-2"
-							>
-								<span class="font-bold">{job.company}</span>
-								<span>&mdash;</span>
-								<span>{job.period}</span>
+					<div class="space-y-5">
+						{#each skills as skill (skill.name)}
+							<div>
+								<div class="flex justify-between items-baseline mb-1.5">
+									<span class="font-serif text-sm font-bold text-news-paper">{skill.name}</span>
+									<span class="font-sans text-[10px] uppercase tracking-wider text-news-paper/40"
+										>{skill.level}</span
+									>
+								</div>
+								<div class="w-full h-[3px] bg-news-paper/10 relative overflow-hidden">
+									<div
+										class="absolute top-0 left-0 h-full bg-news-red transition-all duration-700 ease-out"
+										style="width: {skill.level}"
+									></div>
+								</div>
 							</div>
-						</header>
+						{/each}
+					</div>
+				</div>
+			</div>
 
-						<p class="font-serif text-news-ink leading-relaxed">
-							{job.desc}
-						</p>
-					</article>
-				{/each}
+			<div class="lg:col-span-2" use:reveal={{ delay: 200 }}>
+				<h2 class="font-sans text-[10px] uppercase tracking-[0.2em] text-news-paper/40 mb-8">
+					Histórico Profissional
+				</h2>
+
+				<div class="space-y-14">
+					{#each jobs as job (job.title)}
+						<article class="relative pl-7 border-l-2 border-news-paper/20">
+							<div
+								class="absolute -left-[5px] top-2 w-[10px] h-[10px] bg-news-dark border-2 border-news-red"
+							></div>
+
+							<header class="mb-3">
+								<h3 class="font-serif text-2xl md:text-3xl font-bold text-news-paper leading-tight">
+									{job.title}
+								</h3>
+								<div
+									class="font-sans text-[10px] uppercase tracking-wider text-news-paper/50 mt-1.5 flex items-center gap-2"
+								>
+									<span class="font-bold text-news-red">{job.company}</span>
+									<span class="text-news-paper/20">/</span>
+									<span>{job.period}</span>
+								</div>
+							</header>
+
+							<p class="font-serif text-base md:text-lg text-news-paper/60 leading-relaxed">
+								{job.desc}
+							</p>
+						</article>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>
